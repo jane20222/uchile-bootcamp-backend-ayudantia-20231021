@@ -9,18 +9,18 @@ CREATE TABLE `Usuarios` (
   `nombre_mostrar` VARCHAR(100)
 );
 
-CREATE TABLE `Permisos` (
-  `nombreUsuario` VARCHAR(100),
-  `idRepositorio` VARCHAR(100),
-  PRIMARY KEY (`nombreUsuario`, `idRepositorio`)
-);
-
 CREATE TABLE `Repositorios` (
   `id` VARCHAR(100) PRIMARY KEY,
   `ruta` VARCHAR(100),
   `descripcion` VARCHAR(100),
   `publico` BOOLEAN,
   `idProyecto` VARCHAR(100)
+);
+
+CREATE TABLE `Permisos` (
+  `nombreUsuario` VARCHAR(100),
+  `idRepositorio` VARCHAR(100),
+  PRIMARY KEY (`nombreUsuario`, `idRepositorio`)
 );
 
 CREATE TABLE `Proyectos` (
